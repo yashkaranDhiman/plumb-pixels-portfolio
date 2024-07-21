@@ -1,9 +1,0 @@
-landing page(page1)  = https://www.webthreeconsulting.com/
-page2 = big scroller that gets insite the screen in page1(use gsap pin in it)
-entity - (cursor catching string, use the splited text coming up from the ends, use locomotive and scroll trigger with locomotive speed )
-page3 = the services that we provide and have a hovered effect
-page4 = some text 
-page5 = some text
-page6 = cursor change with images on hover(like sundown)
-page7 = some text
-page8 = footer

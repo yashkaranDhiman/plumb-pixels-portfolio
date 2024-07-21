@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Showcase</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <title>Plumb Pixels</title>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css'>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
@@ -15,27 +16,76 @@
         <p>visit</p>
         <i class="ri-arrow-right-up-line"></i>
     </div>
-    <main>
+    <main >
+        <div id="nav-model-res">
+            <div id="nav-model-heading">
+                <img src="./assets/images/logo.png" alt="">
+                <div class="close">
+                    <i class="ri-close-large-line"></i>
+                </div>
+            </div>
+            <div class="hrline"></div>
+            <div id="nav-model-content">
+                <a href="/"><h4>Home</h4></a>
+                <a href="/"><h4>Services</h4></a>
+                <a href="/"><h4>Contact</h4></a>
+                <a href="/"><h4>Projects</h4></a>
+            </div>
+        </div>
+        <div id="nav-model">
+            <div id="nav-model-heading">
+                <img src="./assets/images/logo.png" alt="">
+                <div class="close">
+                    <i class="ri-close-large-line"></i>
+                </div>
+            </div>
+            <div class="hrline"></div>
+            <div id="nav-model-content">
+                <a href="/"><h4>Home</h4></a>
+                <a href="/"><h4>Services</h4></a>
+                <a href="/"><h4>Contact</h4></a>
+                <a href="/"><h4>Projects</h4></a>
+            </div>
+        </div>
         <div id="page1">
             <nav>
                 <div id="left-nav">
                     <h1>plumb pixels</h1>
                 </div>
                 <div id="center-nav">
-                    <a href="/"><h4>Home</h4></a>
-                    <a href="#page2"><h4>services</h4></a>
-                    <a href="#footer"><h4>contact</h4></a>
-                    <a href="projects"><h4>projects</h4></a>
+                    <a href="/">
+                        <h4>Home</h4>
+                    </a>
+                    <a href="/">
+                        <h4>services</h4>
+                    </a>
+                    <a href="/">
+                        <h4>contact</h4>
+                    </a>
+                    <a href="./project.html">
+                        <h4>projects</h4>
+                    </a>
                 </div>
                 <div id="right-nav">
-                    <i class="ri-menu-fill"></i>
+                    <i class="ri-menu-fill" id="menu"></i>
                     <i class="ri-twitter-x-line"></i>
                 </div>
             </nav>
+            <div class="hrline navline"></div>
             <div id="page1-main">
                 <div id="page1-main-text">
                     <h2>we help <span class='plumber'>plumbers</span> <span>
+                        <img src="./assets/images/logo.png"  alt="">
                         </span> <br /> getting started online</h2>
+                    <button data-scroll data-scroll-speed="-.6" class='start-project'>
+                        <pre>Start project now</pre>
+                        <i class="ri-arrow-right-line rightArr"></i>
+                    </button>
+                </div>
+
+                <div id="page1-main-text-res">
+                    <h2>we help <span class='plumber'>plumbers</span> <br>
+                         getting started <br> online <span><img src="./assets/images/logo.png"  alt=""></span></h2>
                     <button data-scroll data-scroll-speed="-.6" class='start-project'>
                         <pre>Start project now</pre>
                         <i class="ri-arrow-right-line rightArr"></i>
@@ -54,12 +104,17 @@
                     <h4>Develop</h4>
                     <h4>Launch</h4>
                 </div>
+                <div class='marquee'>
+                    <h4>Design</h4>
+                    <h4>Develop</h4>
+                    <h4>Launch</h4>
+                </div>
             </div>
         </div>
         <div id="page2">
             <div class='string'>
                 <svg width="100vw" height="50">
-                    <path d="M 0 25 Q 950 25 1900 25" stroke="black" fill="transparent"/>
+                    <path d="M 0 25 Q 950 25 1900 25" stroke="black" fill="transparent" />
                 </svg>
             </div>
             <div id="page2-heading">
@@ -68,33 +123,38 @@
             <div id="page2-main">
                 <div id="upper-service">
                     <div class="service">
-                        <img data-scroll data-scroll-speed="-.7" src="https://plus.unsplash.com/premium_photo-1720886073981-f975d3dc93f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8"
+                        <img data-scroll data-scroll-speed="-.7"
+                            src="./assets/images/services/design.png"
                             alt="" />
                         <div class="service-text">
-                            <h2>Lorem, ipsum.</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dicta blanditiis officiis
-                                iusto qui! Sequi praesentium fugit nesciunt at iure? Porro natus consequuntur, quidem
-                                accusantium aliquam eos! Minima, saepe vitae!</p>
+                            <h2>design</h2>
+                            <p> Plumb Pixels creates amazing, responsive web designs that reflect your brand's distinct
+                                identity. Our skilled staff offers a seamless user experience, making your online
+                                presence both visually appealing and functional.</p>
                         </div>
                     </div>
                     <div class="service">
-                        <img data-scroll data-scroll-speed="-.7" src="https://plus.unsplash.com/premium_photo-1720886073981-f975d3dc93f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8"
+                        <img data-scroll data-scroll-speed="-1"
+                            src="./assets/images/services/development.png"
                             alt="" />
                         <div class="service-text">
-                            <h2>Lorem, ipsum.</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dicta blanditiis officiis
-                                iusto qui! Sequi praesentium fugit nesciunt at iure? Porro natus consequuntur, quidem
-                                accusantium aliquam eos! Minima, saepe vitae!</p>
+                            <h2>development</h2>
+                            <p>Our skilled web development team builds attractive, responsive websites that
+                                are uniquely tailored to your company. We combine creativity and cutting-edge technology
+                                to provide seamless user experiences and accelerate corporate success.
+                            </p>
                         </div>
                     </div>
                     <div class="service">
-                        <img data-scroll data-scroll-speed="-.7" src="https://plus.unsplash.com/premium_photo-1720886073981-f975d3dc93f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8"
+                        <img data-scroll data-scroll-speed="-1"
+                            src="./assets/images/services/seo.png"
                             alt="" />
                         <div class="service-text">
-                            <h2>Lorem, ipsum.</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dicta blanditiis officiis
-                                iusto qui! Sequi praesentium fugit nesciunt at iure? Porro natus consequuntur, quidem
-                                accusantium aliquam eos! Minima, saepe vitae!</p>
+                            <h2>SEO</h2>
+                            <p>We provides high-quality SEO services to increase your internet visibility. Our
+                                techniques improve search engine results, generate organic visitors, and boost
+                                conversions, ensuring that your brand stands out in the digital arena.
+                            </p>
                         </div>
                     </div>
 
@@ -102,38 +162,121 @@
                 </div>
                 <div id="lower-service">
                     <div class="service">
-                        <img data-scroll data-scroll-speed="-.7" src="https://plus.unsplash.com/premium_photo-1720886073981-f975d3dc93f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8"
+                        <img data-scroll data-scroll-speed="-1"
+                            src="./assets/images/services/hosting.png"
                             alt="" />
                         <div class="service-text">
-                            <h2>Lorem, ipsum.</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dicta blanditiis officiis
-                                iusto qui! Sequi praesentium fugit nesciunt at iure? Porro natus consequuntur, quidem
-                                accusantium aliquam eos! Minima, saepe vitae!</p>
+                            <h2>Hosting</h2>
+                            <p>We offers dependable web hosting services, guaranteeing that your website is
+                                fast, safe, and always available. Our hosting plans offer frequent backups and top-tier
+                                protection to keep your website running smoothly.
+                            </p>
                         </div>
                     </div>
                     <div class="service">
-                        <img data-scroll data-scroll-speed="-.7" src="https://plus.unsplash.com/premium_photo-1720886073981-f975d3dc93f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8"
+                        <img data-scroll data-scroll-speed="-1"
+                            src="./assets/images/services/support.png"
                             alt="" />
                         <div class="service-text">
-                            <h2>Lorem, ipsum.</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dicta blanditiis officiis
-                                iusto qui! Sequi praesentium fugit nesciunt at iure? Porro natus consequuntur, quidem
-                                accusantium aliquam eos! Minima, saepe vitae!</p>
+                            <h2>Customer support</h2>
+                            <p>provided with fast, dependable site hosting with top-tier security, regular
+                                backups, and 24-hour support. Our hosting solutions ensure that your website is secure,
+                                operates optimally, and is always available, allowing you to focus on your business.
+                            </p>
                         </div>
                     </div>
                     <div class="service">
-                        <img data-scroll data-scroll-speed="-.7" src="https://plus.unsplash.com/premium_photo-1720886073981-f975d3dc93f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8"
+                        <img data-scroll data-scroll-speed="-1"
+                            src="./assets/images/services/modern.png"
                             alt="" />
                         <div class="service-text">
-                            <h2>Lorem, ipsum.</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dicta blanditiis officiis
-                                iusto qui! Sequi praesentium fugit nesciunt at iure? Porro natus consequuntur, quidem
-                                accusantium aliquam eos! Minima, saepe vitae!</p>
+                            <h2>upgraded production</h2>
+                            <p>creating cutting-edge websites that combine functionality and style with
+                                slick, responsive designs. We prioritize simple designs, easy-to-use navigation, and the
+                                newest developments to create visually spectacular, intuitive user experiences that
+                                enthrall and engage your audience.</p>
                         </div>
                     </div>
 
                 </div>
             </div>
+            <div id="page2-main-res">
+                    <div class="service">
+                        <img data-scroll data-scroll-speed="-.7"
+                            src="./assets/images/services/design.png"
+                            alt="" />
+                        <div class="service-text">
+                            <h2>design</h2>
+                            <p> Plumb Pixels creates amazing, responsive web designs that reflect your brand's distinct
+                                identity. Our skilled staff offers a seamless user experience, making your online
+                                presence both visually appealing and functional.</p>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <img data-scroll data-scroll-speed="-1"
+                            src="./assets/images/services/development.png"
+                            alt="" />
+                        <div class="service-text">
+                            <h2>development</h2>
+                            <p>Our skilled web development team builds attractive, responsive websites that
+                                are uniquely tailored to your company. We combine creativity and cutting-edge technology
+                                to provide seamless user experiences and accelerate corporate success.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <img data-scroll data-scroll-speed="-1"
+                            src="./assets/images/services/seo.png"
+                            alt="" />
+                        <div class="service-text">
+                            <h2>SEO</h2>
+                            <p>We provides high-quality SEO services to increase your internet visibility. Our
+                                techniques improve search engine results, generate organic visitors, and boost
+                                conversions, ensuring that your brand stands out in the digital arena.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="service">
+                        <img data-scroll data-scroll-speed="-1"
+                            src="./assets/images/services/hosting.png"
+                            alt="" />
+                        <div class="service-text">
+                            <h2>Hosting</h2>
+                            <p>We offers dependable web hosting services, guaranteeing that your website is
+                                fast, safe, and always available. Our hosting plans offer frequent backups and top-tier
+                                protection to keep your website running smoothly.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <img data-scroll data-scroll-speed="-1"
+                            src="./assets/images/services/support.png"
+                            alt="" />
+                        <div class="service-text">
+                            <h2>Customer support</h2>
+                            <p>provided with fast, dependable site hosting with top-tier security, regular
+                                backups, and 24-hour support. Our hosting solutions ensure that your website is secure,
+                                operates optimally, and is always available, allowing you to focus on your business.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <img data-scroll data-scroll-speed="-1"
+                            src="./assets/images/services/modern.png"
+                            alt="" />
+                        <div class="service-text">
+                            <h2>upgraded production</h2>
+                            <p>creating cutting-edge websites that combine functionality and style with
+                                slick, responsive designs. We prioritize simple designs, easy-to-use navigation, and the
+                                newest developments to create visually spectacular, intuitive user experiences that
+                                enthrall and engage your audience.</p>
+                        </div>
+                    </div>
+
+            </div>
+            
             <div class='string'>
                 <svg width="100vw" height="50">
                     <path d="M 0 25 Q 950 25 1900 25" stroke="black" fill="transparent" ref={pathRef} />
@@ -145,10 +288,10 @@
                 <h2>why choose us :</h2>
                 <div class='hrline'></div>
                 <div id="page3-content">
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Ratione laudantium porro quibusdam nam saepe eum veritatis
-                        suscipit vitae ipsam tempora. Ullam excepturi dolor a quaerat praesentium voluptatem et aperiam
-                        dolore, aliquam voluptates totam cumque laudantium architecto.</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Plumb Pixels provides
+                        innovative web design and powerful SEO solutions. We use cutting-edge design techniques to
+                        create engaging, eye-catching websites. Our SEO expertise enables plumbers to convert leads into
+                        clients, increasing online presence and delivering significant business growth.</p>
                     <button class='start-project'>
                         <pre>Start project now</pre>
                         <i class="ri-arrow-right-line rightArr"></i>
@@ -166,20 +309,18 @@
                 <h2>About</h2>
                 <div class='hrline'></div>
                 <div id="page5-content">
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Ratione laudantium porro quibusdam nam saepe eum veritatis
-                        suscipit vitae ipsam tempora. Ullam excepturi dolor a quaerat praesentium voluptatem et aperiam
-                        dolore, aliquam voluptates totam cumque laudantium architecto .</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Plumb Pixels specializes in web
+                        design and development for plumbers. By focusing entirely on this market, we can provide
+                        personalized solutions that address the specific demands of plumbing experts. Our specialized
+                        knowledge ensures that your website astands out and drives results in the plumbing business.</p>
                 </div>
             </div>
         </div>
-        <div class='string'  >
+        <div class='string'>
             <svg width="100vw" height="50">
                 <path d="M 0 25 Q 950 25 1900 25" stroke="black" fill="transparent" ref={pathRef} />
             </svg>
         </div>
-
-
         <div id="page4">
             <div id="page4-heading">
                 <h4>Projects(cloned) </h4>
@@ -187,44 +328,87 @@
             </div>
             <div class="hrline"></div>
             <div id="page4-content">
-                <div class="project" data-video="./assets/images/lead.mp4">
+                <a href="https://yashkarandhiman.github.io/rejouice-clone/" target="_blank" target="_blank"
+                    class="project">
                     <p>rejouice</p>
                     <h5>Visit</h5>
-                </div>
-                <div class="project" data-video="./assets/images/lead.mp4">
+                </a>
+                <a href="https://yashkarandhiman.github.io/sundownStudio-clone/" target="_blank" class="project">
                     <p>sundown</p>
                     <h5>Visit</h5>
-                </div>
-                <div class="project" data-video="./assets/images/lead.mp4">
+                </a>
+                <a href="https://yashkarandhiman.github.io/Larazev-clone/" target="_blank" class="project">
                     <p>larazev</p>
                     <h5>Visit</h5>
-                </div>
-                <div class="project" data-video="./assets/images/lead.mp4">
+                </a>
+                <a href="https://ochi-clone-123.netlify.app" target="_blank" class="project">
                     <p>ochi</p>
                     <h5>Visit</h5>
-                </div>
-                <div class="project" data-video="./assets/images/lead.mp4">
+                </a>
+                <a href="https://two-good-co-123.netlify.app/" target="_blank" class="project">
                     <p>TwoGoodCo</p>
                     <h5>Visit</h5>
-                </div>
-                <div class="project" data-video="./assets/images/lead.mp4">
+                </a>
+                <a href="https://docs-123.netlify.app" target="_blank" class="project">
                     <p>docs</p>
                     <h5>Visit</h5>
-                </div>
-                <div class="project" data-video="./assets/images/lead.mp4">
+                </a>
+                <a href="https://yashkarandhiman.github.io/stake-mines/" target="_blank" class="project">
                     <p>Stake mines</p>
                     <h5>Visit</h5>
-                </div>
-                <div class="project" data-video="./assets/images/lead.mp4">
-                    <p>Stake mines</p>
+                </a>
+                <a href="https://passmanager123.pythonanywhere.com/" target="_blank" class="project">
+                    <p>Password manger</p>
                     <h5>Visit</h5>
+                </a>
+            </div>
+            <a href="./project.html" id="project-btn">All projects</a>
+        </div>
+
+        </div>
+        <div class='string'>
+            <svg width="100vw" height="50">
+                <path d="M 0 25 Q 950 25 1900 25" stroke="black" fill="transparent" ref={pathRef} />
+            </svg>
+        </div>
+        <div id='page6'>
+            <div id="page6-heading">
+                <h2>FAQs</h2>
+                <div class="hrline"></div>
+            </div>
+            <div id="page6-content">
+                <div class="faq">
+                    <div class="faq-heading">
+                        <h4>How can a website improve my plumbing business?</h4>
+                        <i class="ri-corner-right-down-line"></i>
+                    </div>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A well-designed website can significantly enhance your plumbing business by increasing online visibility, attracting more customers, and providing a convenient platform for potential clients to learn about your services and contact you. With features like online booking, customer reviews, and detailed service information, your website can help build trust and credibility with your audience, ultimately leading to increased leads and conversions.
+                    </p>
+                </div>
+                <div class="faq">
+                    <div class="faq-heading">
+                        <h4>
+                            What services do you offer for plumbing businesses?
+                        </h4>
+                        <i class="ri-corner-right-down-line"></i>
+                    </div>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We specialize in designing and developing professional websites tailored specifically for plumbing businesses. Our services include custom web design, responsive web development, search engine optimization (SEO), content creation, and ongoing website maintenance and support. We also offer branding and graphic design services to ensure a cohesive and professional online presence for your plumbing business.
+                    </p>
+                </div>
+                <div class="faq">
+                    <div class="faq-heading">
+                        <h4>What is the process for getting a new website designed and developed?</h4>
+                        <i class="ri-corner-right-down-line"></i>
+                    </div>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our process typically begins with an initial consultation to understand your business needs and goals. We then move on to the design phase, where we create a custom website layout that reflects your brand identity. After your approval, we proceed with the development phase, building a responsive and SEO-friendly website. Once the website is ready, we perform thorough testing to ensure everything functions smoothly. Finally, we launch the website and provide ongoing support and maintenance to keep your site updated and running efficiently.
+                    </p>
                 </div>
             </div>
-            <div id="project-btn">All projects</div>
         </div>
-        
-        </div>
-        <div class='string'  >
+        <div class='string'>
             <svg width="100vw" height="50">
                 <path d="M 0 25 Q 950 25 1900 25" stroke="black" fill="transparent" ref={pathRef} />
             </svg>
@@ -232,10 +416,18 @@
         <div id='footer'>
             <div id="top-footer">
                 <div id="left-footer">
-                    <h4>Home</h4>
-                    <h4>services</h4>
-                    <h4>contact</h4>
-                    <h4>projects</h4>
+                    <a href="/">
+                        <h4>Home</h4>
+                    </a>
+                    <a href="#page2">
+                        <h4>services</h4>
+                    </a>
+                    <a href="#footer">
+                        <h4>contact</h4>
+                    </a>
+                    <a href="projects">
+                        <h4>projects</h4>
+                    </a>
                 </div>
                 <div id="right-footer">
                     <h5 id="email">plumbpixels@gmail.com</h5>
@@ -256,8 +448,12 @@
         </div>
     </main>
     <script src='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js' integrity='sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==' crossorigin='anonymous' referrerpolicy='no-referrer'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js'
+        integrity='sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=='
+        crossorigin='anonymous' referrerpolicy='no-referrer'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
 </body>
 

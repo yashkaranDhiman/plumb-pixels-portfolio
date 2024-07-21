@@ -3,9 +3,21 @@
     padding: 0;
     font-family: 'norm';
   }
+  ::selection{
+    color: #1C99FF;
+    background-color: #F2F2F2;
+  }
   body{
     overflow-x: hidden;
     position: relative;
+    background-color: rgb(242, 242, 242);
+  }
+  .no-scroll {
+    overflow: hidden;
+}
+  a{
+    text-decoration: none;
+    color: black;
   }
   @font-face {
     font-family: 'norm';
@@ -14,7 +26,12 @@
   }
   @font-face {
     font-family: 'heading';
-    src: url('./assets/fonts/Heading.ttf');
+    src: url('./assets/fonts/PTSans-Bold.ttf');
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: 'head';
+    src: url('./assets/fonts/Oswald-Bold.ttf');
     font-weight: normal;
   }
   @font-face {
@@ -22,6 +39,10 @@
     src: url('./assets/fonts/marquee.ttf');
     font-weight: normal;
   }
+  .no-scroll {
+    overflow: hidden;
+}
+
   .hrline{
      width: 100%; 
     height: 1px; 
@@ -32,6 +53,61 @@
     width: 2px; 
     background-color: rgb(142, 142, 142);
   }  */
+  #nav-model{
+    width: 40vw;
+    height: 100vh;
+    backdrop-filter: 30px;
+    background-color: rgba(255, 255, 255, 0.792);
+    right: -40vw;
+    top: 0;
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    position: absolute;
+  }
+  #nav-model-res{
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: 30px;
+    background-color: rgba(255, 255, 255, 0.792);
+    right: -100vw;
+    top: 0;
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    position: absolute;
+  }
+  #nav-model-content{
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+    padding: 5vw;
+  }
+  
+  #nav-model-content h4{
+    font-size: 3vw;
+    text-decoration: underline;
+    text-transform: uppercase;
+  }
+  #nav-model-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1vw 3vw;
+  }
+  #nav-model-heading img{
+    width: 14vw;
+
+  }
+  .close{
+    font-size: 2.5vw;
+    background-color: rgb(223, 223, 223);
+    cursor: pointer;
+    border-radius: 50%;
+    width: 6vw;
+    height: 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   #page1{
     width: 100vw;
     height: 100vh;
@@ -47,10 +123,10 @@
     width: 30%;
   }
   h1{
-    font-family: 'norm';
-    font-weight: 700;
+    font-family: 'heading';
+    font-weight: 400;
     font-size: 3vw;
-    letter-spacing: -2px;
+    letter-spacing: -.1vw;
   }
   #center-nav{
     display: flex;
@@ -75,15 +151,16 @@
   }
   #page1-main{
     height: 72%;
-    padding: 0 9vw;
+    padding: 0 6vw;
     display: flex;
   }
   #page1-main h2{
     font-size: 9vw;
     text-transform: uppercase;
-    font-family: 'heading';
-    font-weight: 300;
+    font-family: 'head';
     white-space: nowrap;
+    letter-spacing: -.6vw;
+    line-height: 10vw;
   }
   #page1-main-text{
     padding: 2vw;
@@ -91,18 +168,26 @@
     flex-direction: column;
     gap: 4vw;
   }
+  #page1-main-text img{
+    width: 18vw;
+  }
+  #page1-main-text-res img{
+    width: 18vw;
+  }
   .start-project{
     display: flex;
     align-items: center;
     gap: 1vw;
     font-size: 1.6vw;
-    background-color: rgb(247, 247, 247);
-    border: 1px solid #2e2e2e;
+    border: none;
+    outline: none;
+    background-color: #FE4A4A;
     border-radius: 30px;
     cursor: pointer;
     text-transform: capitalize;
     outline: none;
     padding: 10px 12px;
+    color: white;
     width: 300px;
     justify-content: center;
     transition: all ease 0.2s;
@@ -115,12 +200,12 @@
     scale: 1.2;
   }
   .start-project:hover{
-    font-size: 1.62vw;
+    scale: 1.02;
   }
   .plumber{
-    color: red;
+    color: #1C99FF;
     font-weight: 400;
-    font-family: 'heading';
+    font-family: 'head';
   }
   #marquee-container{
     display: flex;
@@ -170,25 +255,39 @@
   .service img{
     transition: all ease 0.3s;
     opacity: 1;
+    background-position: center;
+    object-fit: cover;
+    width: 100%;
   }
+  
   .service-text{
     position: absolute;
     z-index: 9;
     bottom: 0;
     display: flex;
     flex-direction: column;
-    color: white;
+    color: black;
     gap: 1vw;
     padding: 1vw;
+    opacity: 0;
+    transition: all ease 0.3s;
+  }
+  .service:hover .service-text{
+    opacity: 1;
+  }
+  .service:hover img{
+    opacity: .4;
   }
   .service-text h2{
+    text-transform: capitalize;
     font-size: 2vw;
   }
   .service-text p{
     font-size: 1.2vw;
+    font-weight: 500;
   }
   .service:hover img{
-    scale: 1.3;
+    scale: 1.06;
   }
   #page2-main{
     display: flex;
@@ -210,25 +309,25 @@
     height: 100vh;
     position: relative;
   }
-  #page3-container,#page5-container,#page6-container{
+  #page3-container,#page5-container{
     width: 95%;
     position: absolute;
     left: 50%;
     top: 40%;
     transform: translate(-50%,-50%);
   }
-  #page3 h2,#page5 h2,#page6 h2{
+  #page3 h2,#page5 h2{
     font-size: 2vw;
     text-transform: capitalize;
     color: #444444;
     font-weight: 400;
     margin-bottom: 1vw;
   }
-  #page3 p,#page5 p,#page6 p{
+  #page3 p,#page5 p{
     margin-top: 1vw;
     font-size: 4vw;
   }
-  #page3-content,#page5-content,#page6-content{
+  #page3-content,#page5-content{
     display: flex;
     gap: 2vw;
     align-items: center;
@@ -238,9 +337,10 @@
     width: 100vw;
     height: 100vh;
     position: relative;
-    margin-bottom: 25vw;
+    margin-bottom: 30vw;
   }
   i{
+    cursor: pointer;
     font-size: 2vw;
   }
   #page4 h4{
@@ -269,8 +369,7 @@
     position: relative;
     overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
   }
-  
-  .project p {
+  .project p{
     font-size: 2.5vw;
     padding: 2vw;
     position: relative;
@@ -301,13 +400,14 @@
     text-transform: capitalize;
     width: 120px;
     height: 120px;
-    border: 1px solid rgb(81, 81, 81);
+    border: 1px solid #FE4A4A;
     z-index: 99;
     scale: 0;
     opacity: 0;
     border-radius: 50%;
     position: fixed;
-    background-color: #dadada;
+    background-color: #FE4A4A;
+    color: white;
 }
 
 #visit-cursor p {
@@ -321,6 +421,7 @@
     z-index: 99;
     color: black;
     top: 15%;
+    color: white;
     right: 15%;
     z-index: 9;
     font-size: 1.5vw;
@@ -328,7 +429,7 @@
 }
   .project::before {
     content: "";
-    background-color: orangered;
+    background-color: #1C99FF;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -342,8 +443,15 @@
   .project:hover::before {
     transform: translateY(0);
   }
+  #project-btn:hover{
+    background-color: #FE4A4A;
+    border: 1px solid #FE4A4A;
+    scale: 1.05;
+    color: white;
+  }
   #project-btn{
     font-size: 1.6vw;
+    transition: all ease 0.3s;
     background-color: rgb(247, 247, 247);
     border: 1px solid #2e2e2e;
     border-radius: 30px;
@@ -356,6 +464,37 @@
     justify-content: center;
     align-items: center;
     margin: 2vw;
+  }
+  #page6{
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+  }
+  #page6-heading{
+    font-size: 3vw;
+    padding: 1vw 2vw;
+  }
+  #page6-content{
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+    padding: 1vw 2vw;
+    margin-bottom: 10vw;
+  }
+  .faq-heading{
+    display: flex;
+    align-items: center;
+    font-size: 2vw;
+    gap: 1vw;
+    color: #444444;
+  }
+  .faq p{
+    font-size: 2.5vw;
+  }
+  .faq{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
   }
   #footer{
     width: 100vw;
@@ -373,9 +512,6 @@
     flex-direction: column;
     padding: 2vw;
   }
-  #left-footer h4{
-    text-decoration: underline;
-  }
   #right-footer{
     padding: 2vw;
   }
@@ -384,8 +520,13 @@
     font-weight: 300;
   }
   #left-footer h4{
+    text-decoration: underline;
     font-size: 2vw;
     font-weight: 300;
+  }
+  #left-footer a{
+    text-decoration: none;
+    color: black;
   }
   #bottom-footer{
     display: flex;
@@ -395,13 +536,13 @@
   #name{
     white-space: nowrap;
     text-transform: uppercase;
+    color: #1C99FF;
   }
   #name  h2{
-    letter-spacing: 2vw;
-    font-size: 22vw;
-    letter-spacing: -6px;
+    font-size: 18vw;
+    letter-spacing: -10px;
     font-weight: 400;
-    font-family: 'heading';
+    font-family: 'head';
   }
   #links{
     display: flex;
@@ -417,22 +558,6 @@
     font-weight: 300;
     text-decoration: underline;
   }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   @keyframes anime1 {
     from{
       transform: translateX(0);
@@ -441,5 +566,353 @@
       transform: translateX(-100%);
     }
   }
-  
-  
+  #page1-main-text-res{
+    display: none;
+  }
+  #page2-main-res{
+    display: none;
+  }
+  .navline{
+    display: none ;
+  }
+  #nav-model-res{
+    display: none;
+  }
+  @media screen and (max-width:1000px) {
+    #page1-main h2{
+      line-height: 12vw;
+    }
+    #visit-cursor{
+      width: 8vw;
+      height: 8vw;
+    }
+    #name h2{
+      font-size: 18vw;
+      line-height: 35vw;
+    }
+    .start-project{
+      width: 250px;
+    }
+    .marquee{
+      padding-top: 5vw;
+    }
+    #page4{
+      margin-bottom: 0;
+    }
+  }
+  @media screen and (max-width:900px) {
+    nav{
+      padding: 2vw 5vw;
+    }
+    #center-nav h4{
+      font-size: 2vw;
+    }
+    #page1-main h2{
+      line-height: 20vw;
+    }
+    .start-project{
+      margin-top: 5vw;
+      font-size: 2vw;
+    }
+    .service-text h2{
+      font-size: 2.6vw;
+    }
+    .service-text p{
+      font-size: 1.6vw;
+    }
+    #page3 h2,#page5 h2{
+      font-size: 3vw;
+      margin-bottom: 2vw;
+    }
+    #page3 p,#page5 p{
+      margin-top: 4vw;
+      font-size: 5vw;
+    }
+    .service{
+      width: 30vw;
+      height: 30vw;
+    }
+   #page2-heading{
+      font-size: 4vw;
+    }
+    #page4 h4{
+      font-size: 3vw;
+    }
+    .project p {
+      font-size: 3vw;
+    }
+    #project-btn{
+      width: 200px;
+    }
+    #left-footer h4{
+      font-size: 3vw;
+    }
+    #right-footer h5{
+      font-size: 2.5vw;
+    }
+    #links h4{
+      font-size: 2vw;
+    }
+    #name h2{
+      font-family: 'marquee';
+      font-size: 33vw;
+      letter-spacing: 0;
+      line-height: 40vw;
+    }
+    #page1-main-text-res{
+      display: block;
+    }
+    #page1-main-text-res h2{
+      font-size: 12vw;
+      line-height: 12vw;
+      font-family: 'head';
+    }
+    #page1-main-text{
+      display: none;
+    }
+    .marquee{
+      padding-top: 2vw;
+    }
+}
+  @media screen and (max-width:800px) {
+      .marquee{
+        padding-top: 5vw;
+        /* background-color: blue; */
+      }
+      .service-text h2{
+        font-size: 3vw;
+      }
+      .service-text p{
+        font-size: 1.8vw;
+      }
+      .project p {
+        font-size: 4vw;
+      }
+      #project-btn{
+        font-size: 2.5vw;
+      }
+      #page4{
+        margin-bottom: 5vw;
+      }
+      #name h2{
+        font-size: 34vw;
+      }
+      #name{
+        margin-bottom: 5vw;
+      }
+  }
+  @media screen and (max-width:700px) {
+    #page1-main h2{
+      line-height: 15vw;
+    }
+    .start-project{
+      font-size: 3vw;
+    }
+    .marquee h4{
+      font-size: 30vw;
+    }
+    #visit-cursor{
+      width: 12vw;
+      height: 12vw;
+    }
+    #visit-cursor p{
+      font-size: 2.5vw;
+    }
+    .faq h4,i{
+      font-size: 3vw;
+    }
+    .faq p{
+      font-size: 4vw;
+    }
+    .faq{
+      margin-bottom: 5vw;
+    }
+    #name{
+      margin-bottom: 12vw;
+    }
+    #left-footer h4{
+      font-size: 4vw;
+    }
+    #right-footer h5{
+      font-size: 3.5vw;
+    }
+    #links h4{
+      font-size: 3vw;
+    }
+    #page2-main{
+      display: none;
+    }
+    #page2-main-res{
+      display: grid;
+      grid-template-columns:1fr;
+      place-items: center;
+    }
+    .service{
+      margin-bottom: 5vw;
+      width: 80vw;
+      height: 80vw;
+    }
+    .service-text{
+      opacity: 1;
+    }
+    .service-text h2{
+      font-size: 8vw;
+    }
+    .service-text p{
+      font-size: 4vw;
+    }
+    #page3 h2,#page5 h2{
+      font-size: 8vw;
+      margin-bottom: 2vw;
+    }
+    #page3 p,#page5 p{
+      margin-top: 4vw;
+      font-size: 7vw;
+    }
+    #top-footer{
+      padding: 6vw;
+    }
+    .navline{
+      display: block;
+    }
+    footer{
+      height: 70vh;
+    }
+}
+@media screen and (max-width:600px) {
+    #nav-model-res{
+      display: block;
+    }
+    #nav-model{
+      display: none;
+    }
+    #center-nav{
+      display: none;
+    }
+    #page1{
+      height: 100vh;
+    }
+    .marquee h4{
+      font-size: 45vw;
+    }
+    .marquee{
+      padding-top: 0;
+    }
+    #page1-main h2{
+      line-height: 20vw;
+    }
+    nav{
+      margin-bottom: 5vw;
+    }
+    h1{
+      font-size: 4vw;
+    }
+    #right-nav i{
+      font-size: 4vw;
+    }
+    .start-project{
+      gap: 3vw;
+    }
+    .project p {
+      padding: 4vw;
+      font-size: 4vw;
+    }
+    .project h5{
+      font-size: 2.4vw;
+    }
+    #page4{
+      margin-bottom: 15vw;
+    }
+    #project-btn{
+      margin-top: 3vw;
+    }
+
+    #name{
+      margin-top: 20vw;
+    }
+    #top-footer{
+      display: flex;
+      flex-direction: column;
+    }
+    h1{
+      font-size: 7vw;
+    }
+    #left-nav{
+      width: auto;
+    }
+    #right-nav i{
+      font-size: 5vw;
+    }
+    #page1-main-text-res h2{
+      line-height: 22vw;
+    }
+    .start-project{
+      font-size: 4vw;
+    }
+    .start-project i{
+      font-size: 4vw;
+    }
+    #page2-heading{
+      font-size: 6vw;
+    }
+    .service p{
+      font-size: 2.5vw;
+    }
+    #page4 h4{
+      font-size: 5vw;
+    }
+    .project p{
+      font-size: 5vw;
+    }
+    #project-btn{
+      font-size: 4vw;
+    }
+    #page6-heading{
+      font-size: 5vw;
+    }
+    #page6-content h4,#page6-content i{
+      font-size: 4vw;
+    }
+    #name{
+      margin-top: 25vw;
+    }
+    nav{
+      margin-bottom: 0;
+    }
+    .navline{
+      margin-bottom: 10vw;
+    }
+    #nav-model-content h4{
+      font-size: 8vw;
+    }
+    #nav-model-content{
+      gap: 7vw;
+    }
+    #nav-model-heading img{
+      width: 25vw;
+    }
+    .close{
+      width: 12vw;
+      height: 12vw;
+    }
+}
+@media screen and (max-width:400px) {
+    #page1-main-text-res h2{
+      font-size: 14vw;
+      line-height: 20vw;
+      font-family: 'head';
+      white-space: wrap;
+    }
+    #page1-main-text-res h2 img{
+      width: 30vw;
+    }
+    #page1-main{
+      padding: 2vw 2vw;
+    }
+    .start-project{
+      width: 200px;
+    }
+    .start-project h2, .start-project i{
+      font-size: 5vw;
+    }
+}
