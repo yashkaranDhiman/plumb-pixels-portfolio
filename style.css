@@ -558,6 +558,46 @@
     font-weight: 300;
     text-decoration: underline;
   }
+  #contact-model{
+    border: 1px solid black;
+    border-radius: 8px;
+    position: absolute;
+    top: 2vw;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 99;
+    background-color: white;
+    width: 90%;
+    height: 90vh;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2vw;
+    padding: 5vw 10vw;
+  }
+  form h2{
+    text-transform: uppercase;
+
+    font-size: 3vw;
+  }
+  form input, form textarea{
+    font-size: 1.6vw;
+    padding: 10px 12px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid black;
+  }
+  form button{
+    font-size: 1.6vw;
+    padding: 10px 12px;
+    background-color: #1C99FF;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: black;
+  }
   @keyframes anime1 {
     from{
       transform: translateX(0);
@@ -779,140 +819,140 @@
       height: 70vh;
     }
 }
-@media screen and (max-width:600px) {
-    #nav-model-res{
-      display: block;
-    }
-    #nav-model{
-      display: none;
-    }
-    #center-nav{
-      display: none;
-    }
-    #page1{
-      height: 100vh;
-    }
-    .marquee h4{
-      font-size: 45vw;
-    }
-    .marquee{
-      padding-top: 0;
-    }
-    #page1-main h2{
-      line-height: 20vw;
-    }
-    nav{
-      margin-bottom: 5vw;
-    }
-    h1{
-      font-size: 4vw;
-    }
-    #right-nav i{
-      font-size: 4vw;
-    }
-    .start-project{
-      gap: 3vw;
-    }
-    .project p {
-      padding: 4vw;
-      font-size: 4vw;
-    }
-    .project h5{
-      font-size: 2.4vw;
-    }
-    #page4{
-      margin-bottom: 15vw;
-    }
-    #project-btn{
-      margin-top: 3vw;
-    }
+  @media screen and (max-width:600px) {
+      #nav-model-res{
+        display: block;
+      }
+      #nav-model{
+        display: none;
+      }
+      #center-nav{
+        display: none;
+      }
+      #page1{
+        height: 100vh;
+      }
+      .marquee h4{
+        font-size: 45vw;
+      }
+      .marquee{
+        padding-top: 0;
+      }
+      #page1-main h2{
+        line-height: 20vw;
+      }
+      nav{
+        margin-bottom: 5vw;
+      }
+      h1{
+        font-size: 4vw;
+      }
+      #right-nav i{
+        font-size: 4vw;
+      }
+      .start-project{
+        gap: 3vw;
+      }
+      .project p {
+        padding: 4vw;
+        font-size: 4vw;
+      }
+      .project h5{
+        font-size: 2.4vw;
+      }
+      #page4{
+        margin-bottom: 15vw;
+      }
+      #project-btn{
+        margin-top: 3vw;
+      }
 
-    #name{
-      margin-top: 20vw;
-    }
-    #top-footer{
-      display: flex;
-      flex-direction: column;
-    }
-    h1{
-      font-size: 7vw;
-    }
-    #left-nav{
-      width: auto;
-    }
-    #right-nav i{
-      font-size: 5vw;
-    }
-    #page1-main-text-res h2{
-      line-height: 22vw;
-    }
-    .start-project{
-      font-size: 4vw;
-    }
-    .start-project i{
-      font-size: 4vw;
-    }
-    #page2-heading{
-      font-size: 6vw;
-    }
-    .service p{
-      font-size: 2.5vw;
-    }
-    #page4 h4{
-      font-size: 5vw;
-    }
-    .project p{
-      font-size: 5vw;
-    }
-    #project-btn{
-      font-size: 4vw;
-    }
-    #page6-heading{
-      font-size: 5vw;
-    }
-    #page6-content h4,#page6-content i{
-      font-size: 4vw;
-    }
-    #name{
-      margin-top: 25vw;
-    }
-    nav{
-      margin-bottom: 0;
-    }
-    .navline{
-      margin-bottom: 10vw;
-    }
-    #nav-model-content h4{
-      font-size: 8vw;
-    }
-    #nav-model-content{
-      gap: 7vw;
-    }
-    #nav-model-heading img{
-      width: 25vw;
-    }
-    .close{
-      width: 12vw;
-      height: 12vw;
-    }
-}
-@media screen and (max-width:400px) {
-    #page1-main-text-res h2{
-      font-size: 14vw;
-      line-height: 20vw;
-      font-family: 'head';
-      white-space: wrap;
-    }
-    #page1-main-text-res h2 img{
-      width: 30vw;
-    }
-    #page1-main{
-      padding: 2vw 2vw;
-    }
-    .start-project{
-      width: 200px;
-    }
-    .start-project h2, .start-project i{
-      font-size: 5vw;
-    }
-}
+      #name{
+        margin-top: 20vw;
+      }
+      #top-footer{
+        display: flex;
+        flex-direction: column;
+      }
+      h1{
+        font-size: 7vw;
+      }
+      #left-nav{
+        width: auto;
+      }
+      #right-nav i{
+        font-size: 5vw;
+      }
+      #page1-main-text-res h2{
+        line-height: 22vw;
+      }
+      .start-project{
+        font-size: 4vw;
+      }
+      .start-project i{
+        font-size: 4vw;
+      }
+      #page2-heading{
+        font-size: 6vw;
+      }
+      .service p{
+        font-size: 2.5vw;
+      }
+      #page4 h4{
+        font-size: 5vw;
+      }
+      .project p{
+        font-size: 5vw;
+      }
+      #project-btn{
+        font-size: 4vw;
+      }
+      #page6-heading{
+        font-size: 5vw;
+      }
+      #page6-content h4,#page6-content i{
+        font-size: 4vw;
+      }
+      #name{
+        margin-top: 25vw;
+      }
+      nav{
+        margin-bottom: 0;
+      }
+      .navline{
+        margin-bottom: 10vw;
+      }
+      #nav-model-content h4{
+        font-size: 8vw;
+      }
+      #nav-model-content{
+        gap: 7vw;
+      }
+      #nav-model-heading img{
+        width: 25vw;
+      }
+      .close{
+        width: 12vw;
+        height: 12vw;
+      }
+  }
+  @media screen and (max-width:400px) {
+      #page1-main-text-res h2{
+        font-size: 14vw;
+        line-height: 20vw;
+        font-family: 'head';
+        white-space: wrap;
+      }
+      #page1-main-text-res h2 img{
+        width: 30vw;
+      }
+      #page1-main{
+        padding: 2vw 2vw;
+      }
+      .start-project{
+        width: 200px;
+      }
+      .start-project h2, .start-project i{
+        font-size: 5vw;
+      }
+  }
